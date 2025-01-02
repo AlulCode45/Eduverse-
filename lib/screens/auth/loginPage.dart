@@ -102,7 +102,7 @@ class Loginpage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => Navigator.pushNamed(context, '/register'),
                         child: Text(
                           'Create an account',
                           style: TextStyle(fontSize: 20, color: Color(0xff686BFF)),
