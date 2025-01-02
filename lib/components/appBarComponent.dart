@@ -2,29 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 class Appbarcomponent extends StatelessWidget implements PreferredSizeWidget {
-  const Appbarcomponent({super.key});
+  final String? pageTitle;
+  Appbarcomponent({super.key, this.pageTitle});
+
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
-      leading: Builder(
-        builder: (context) {
-          return GestureDetector(
-            onTap: Scaffold.of(context).openDrawer,
-            child: HugeIcon(
-                icon: HugeIcons.strokeRoundedMenu02, color: Colors.black),
-          );
-        },
+      leading: IconButton(
+        onPressed: () {},
+        icon: HugeIcon(
+            icon: HugeIcons.strokeRoundedArrowLeft01, color: Colors.black),
       ),
-      actions: [
-        Padding(
-          padding: EdgeInsets.only(right: 20),
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/profile.jpg'),
-          ),
-        )
-      ],
+      title: Text(
+        pageTitle ?? '',
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Color(0xff525F7F),
+        ),
+      ),
     );
   }
 
