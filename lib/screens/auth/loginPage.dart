@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:starter_pack/components/appBarComponent.dart';
 
 class Loginpage extends StatelessWidget {
   const Loginpage({super.key});
@@ -7,13 +8,7 @@ class Loginpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: HugeIcon(
-              icon: HugeIcons.strokeRoundedArrowLeft01, color: Colors.black),
-        ),
-      ),
+      appBar: Appbarcomponent(),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
