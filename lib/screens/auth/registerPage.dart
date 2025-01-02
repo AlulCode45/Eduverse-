@@ -18,15 +18,35 @@ class Registerpage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            HeaderText(text: 'Create a account',fontSize: 30),
+            HeaderText(text: 'Create a account', fontSize: 30),
             SizedBox(height: 10),
-            HeaderText(text: 'Choose your account',color: Color(0xff98A3C7)),
-            SizedBox(height: 32,),
-            Signupoption(icon: HugeIcons.strokeRoundedFacebook02, text: 'Facebook',background: Color(0xff466CFF),),
-            Signupoption(icon: HugeIcons.strokeRoundedGoogle, text: 'Google',background: Color(0xff5599FF),),
-            Signupoption(icon: Icons.mail, text: 'E-mail',background: Color(0xffBBC1D4),),
+            HeaderText(text: 'Choose your account', color: Color(0xff98A3C7)),
+            SizedBox(
+              height: 32,
+            ),
+            Signupoption(
+              icon: HugeIcons.strokeRoundedFacebook02,
+              text: 'Facebook',
+              background: Color(0xff466CFF),
+              onTap: () {},
+            ),
+            Signupoption(
+              icon: HugeIcons.strokeRoundedGoogle,
+              text: 'Google',
+              background: Color(0xff5599FF),
+              onTap: () {},
+            ),
+            Signupoption(
+              icon: Icons.mail,
+              text: 'E-mail',
+              background: Color(0xffBBC1D4),
+              onTap: () => Navigator.pushNamed(context, '/register/form'),
+            ),
             Spacer(),
-            Text('By using it you confirm that you have read and agree to our terms of service and privacy policy',textAlign: TextAlign.center,)
+            Text(
+              'By using it you confirm that you have read and agree to our terms of service and privacy policy',
+              textAlign: TextAlign.center,
+            )
           ],
         ),
       ),
